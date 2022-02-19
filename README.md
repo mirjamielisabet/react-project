@@ -8,7 +8,9 @@ In addition to the description, the tasks can have a tag and a due date.
 ## Motivation
 
 This app has been created as a part of the Frontend development course in TAMK (Tampere University of Applied Sciences).
-The first time using React.
+The first time using React: the code may not follow the best practices and it contains some repetition.
+
+The App was created and returned for the course in 12/2021 and it was later (2/2022) uploaded to Github with minor edits.
 
 ## Tech/framework used
 
