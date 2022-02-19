@@ -15,10 +15,9 @@ export class InfoComponent extends React.Component {
           <p>
             This project work is made as a part of the Frontend development
             (React) course and it uses the <i>json server</i> for implementing
-            the backend. (Start the json server:{" "}
-            <i>npx json-server -H localhost -p 3010 -w ./db.json</i>){" "}
+            the backend.
           </p>
-          <p>Copyright © Mirjami Laiho</p>
+          <p>Copyright © Mirjami Laiho 2021</p>
         </div>
         <div className="textarea">
           <h3>How To Use the App</h3>
