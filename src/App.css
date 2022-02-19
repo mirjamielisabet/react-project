@@ -1,0 +1,372 @@
+/* Defines that padding and border are included in the
+width and height of an element */
+* {
+  box-sizing: border-box;
+}
+
+/* Sets the font, background color and text color for the entire page.
+Centers the text and adds margin to the top. */
+body {
+  background-color: #d4d8f0;
+  color: #232946;
+  margin-top: 4%;
+  font-family: "Calibri Light", "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+/* Sets unvisited link color for the entire page */
+a:link {
+  color: #5f6c7b;
+}
+
+/* Sets link color when the user has visited the page behind the link */
+a:visited {
+  color: #5f6c7b;
+}
+
+/* Sets link color when user's mouse hovers over the link */
+a:hover {
+  color: #fffffe;
+}
+
+/* Sets link color when user clicks the link */
+a:active {
+  color: #fffffe;
+}
+
+/* Sets properties for the header: sets the font, font size and weight and shadow */
+.header h1 {
+  font-family: "Indie Flower", cursive;
+  text-shadow: 4px 5px 5px #5f6c7b;
+  font-size: 3.5em;
+  font-weight: lighter;
+}
+
+/* Properties for the navigation bar's unordered list: Removes list items marker,
+padding and margin and by using flex centers the list items */
+.links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+/* Sets properties for the links in navbar: adds padding, removes
+text decoration, adds background color, border and border radius */
+.links a {
+  padding: 12px;
+  margin: 5px;
+  background-color: #fffffe;
+  border-radius: 0.2em;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+
+/* Links in navbar on hover: changes background color,
+border color and font weight */
+.links a:hover {
+  background-color: #b8c1ec;
+  border: 1.5px solid #5f6c7b;
+  font-weight: bold;
+}
+
+/* Properties for the component that acts as a container for the content:
+Sets background color, padding and border radius */
+.mainComponent {
+  background-color: #fffffe;
+  padding: 10px;
+  border-radius: 0.25em;
+}
+
+/* Buttons on hover: Changes the background color, font color and
+border radius and changes the cursor to pointer */
+.button:hover {
+  color: #fffffe;
+  background-color: #b8c1ec;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+/* Properties for the delete button: Adds padding, margin, defines the grid
+area and width and height */
+.deleteButton {
+  padding: 3.5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  grid-area: delete;
+  height: 25px;
+  width: 25px;
+  margin-top: 7px;
+  margin-left: -55%;
+}
+
+/* Delete button on hover: Changes the font color, background color,
+adds border radius and changes the cursor to pointer */
+.deleteButton:hover {
+  color: #fffffe;
+  background-color: #b8c1ec;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+/* Properties for the forms: adds border, border radius,
+shadow, padding and margin */
+.form {
+  border: 1.5px solid #d4d8f0;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 5px#d4d8f0;
+  padding: 30px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* Properties for the input fields: sets height, padding,
+border, margin, border radius and flex */
+input {
+  border: 0.7px solid #5f6c7b;
+  border-radius: 0.25em;
+  height: 25px;
+  padding: 5px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+}
+
+/* Sets display to flex for the labels and input fields and defines
+flex direction, centers the elements and aligns text to the right.
+Adds margin to the bottom */
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+/* Changes background color of the input field when it is focused */
+input:focus {
+  background-color: #d4d8f0;
+}
+
+/* Defines properties for the textarea (= box that contains text and other elements):
+adds border, border radius, shadow, margin and padding */
+.textarea {
+  border: 1.5px solid #d4d8f0;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 5px#d4d8f0;
+  padding: 30px;
+  margin: 30px 2%;
+}
+
+/* Properties for the tasks data: sets display to grid and defines
+the grid areas, adds margin, centers the items and adds padding and border */
+.alldata {
+  display: grid;
+  grid-template-areas: "checkbox task tag due" "edit edit delete delete";
+  grid-template-columns: 8% 35% 22% 35%;
+  margin-left: 2%;
+  margin-right: 1%;
+  margin-bottom: 40px;
+  justify-items: center;
+  border: 1.5px solid #d4d8f0;
+  border-radius: 0.4em;
+  padding: 10px;
+}
+
+/* Properties for the tasks data (in home page and completed page):
+sets display to grid and defines the grid areas, adds margin,
+centers the items and adds padding and border */
+.alldata2 {
+  display: grid;
+  grid-template-areas: "checkbox task tag due delete";
+  grid-template-columns: 8% 35% 22% 35%;
+  margin-left: 2%;
+  margin-right: 1%;
+  margin-bottom: 40px;
+  justify-items: center;
+  border: 1.5px solid #d4d8f0;
+  border-radius: 0.4em;
+  padding: 10px;
+}
+
+/* Removes the margin from top of the delete button at
+home page and completed page */
+.alldata2 .deleteButton {
+  margin-top: 0;
+}
+
+/* Defines the position of the edit button */
+.alldata .edit {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+/* Defines the position of the delete button */
+.alldata .deleteButton {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+/* Sets the width and height for the checkbox and defines
+it's grid area */
+.checkBox {
+  grid-area: checkbox;
+  width: 20px;
+  height: 20px;
+}
+
+/* Changes the cursor to pointer for checkbox on hover */
+.checkBox:hover {
+  cursor: pointer;
+}
+
+/* Defines the task's grid area */
+.task {
+  grid-area: task;
+}
+
+/* Defines the tag's grid area */
+.tag {
+  grid-area: tag;
+}
+
+/* Defines the due date's grid area */
+.due {
+  grid-area: due;
+}
+
+/* Defines the edit button's properties: sets grid area,
+adds padding, margin and sets height and width */
+.edit {
+  grid-area: edit;
+  padding: 3.5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 25px;
+  width: 35px;
+  margin-top: 7px;
+  margin-left: 24px;
+}
+
+/* Edit button on hover: changes text color, background
+color and cursor to pointer. Adds border radius */
+.edit:hover {
+  color: #fffffe;
+  background-color: #b8c1ec;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+/* Adds margin to the left of the Cancel button */
+.cancelBtn {
+  margin-left: 5px;
+}
+
+/* Cancel button on hover: changes text color, background
+color and cursor to pointer and adds border radius */
+.cancelBtn:hover {
+  color: #fffffe;
+  background-color: #b8c1ec;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+/* Sets grid display for the headings of the todolist. Adds margin
+and defines columns */
+.headings {
+  display: grid;
+  grid-template-areas: "doneHeading taskHeading tagHeading dueHeading";
+  grid-template-columns: 13% 29% 26% 33%;
+  margin-left: 3%;
+  margin-right: 5%;
+}
+
+/* Defines the grid area for done-column's heading */
+.doneHeading {
+  grid-area: doneHeading;
+}
+
+/* Defines the grid area for the heading of the tasks */
+.taskHeading {
+  grid-area: taskHeading;
+}
+
+/* Defines the grid area for the tag heading */
+.tagHeading {
+  grid-area: tagHeading;
+}
+
+/* Defines the grid area for the due date's heading */
+.dueHeading {
+  grid-area: dueHeading;
+}
+
+/* When the screen is at least 650px wide: modifys the todolist's grid columns,
+decreases the bottom margin, changes the places of the edit and delete
+buttons, changes the places of the headings and modifys the margins of
+the forms, textareas and delete and edit buttons */
+@media screen and (min-width: 650px) {
+  .alldata {
+    grid-template-areas: "checkbox task tag due edit delete";
+    grid-template-columns: 7% 35% 20% 20% 10% 8%;
+    margin-bottom: 18px;
+  }
+  .alldata2 {
+    grid-template-areas: "checkbox task tag due edit delete";
+    grid-template-columns: 7% 35% 20% 20% 10% 8%;
+    margin-bottom: 18px;
+  }
+  .alldata .edit {
+    grid-column-start: 5;
+    grid-column-end: 5;
+  }
+  .alldata .deleteButton {
+    grid-column-start: 6;
+    grid-column-end: 6;
+  }
+  .headings {
+    grid-template-areas: "doneHeading taskHeading tagHeading dueHeading";
+    grid-template-columns: 10% 32% 23% 18%;
+  }
+  .textarea {
+    margin: 30px 8%;
+  }
+  .form {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .deleteButton {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .edit {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+/* When the screen is at least 800px wide: modifys the margins
+of the body, textareas and forms */
+@media screen and (min-width: 800px) {
+  body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .textarea {
+    margin: 30px 10%;
+  }
+  .form {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+/* When the screen is at least 1150px wide: enlarges the
+left and right margins of the body */
+@media screen and (min-width: 1150px) {
+  body {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
