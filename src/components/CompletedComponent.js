@@ -33,7 +33,7 @@ export class CompletedComponent extends React.Component {
         data: [],
       });
       axios
-        .get("http://localhost:3010/tasks?done=true")
+        .get("/tasks?done=true")
         .then((result) => {
           this.setState({
             loading: false,
@@ -58,7 +58,7 @@ export class CompletedComponent extends React.Component {
   handleChange(tasks) {
     let id = tasks.id;
     axios
-      .put(`http://localhost:3010/tasks/${id}`, {
+      .put(`/tasks/${id}`, {
         task: tasks.task,
         due: tasks.due,
         tag: tasks.tag,
@@ -80,7 +80,7 @@ export class CompletedComponent extends React.Component {
   // Then updates the state's data array accordingly
   handleDelete(id) {
     axios
-      .delete(`http://localhost:3010/tasks/${id}`)
+      .delete(`/tasks/${id}`)
       .then((res) => {
         this.setState((previousState) => {
           return {
