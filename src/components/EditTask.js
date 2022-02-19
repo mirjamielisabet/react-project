@@ -42,7 +42,7 @@ class EditTodo extends React.Component {
         tag: this.state.tag,
         done: this.state.done,
         index: this.state.index,
-        date: new Date(Date.now()).toLocaleString().split(",")[0],
+        date: new Date().toISOString().replace(/T/, " ").replace(/\..+/, ""),
       })
       .then((resp) => {
         this.props.getData();
