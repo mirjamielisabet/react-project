@@ -36,7 +36,7 @@ class EditTodo extends React.Component {
   handleEditSubmit(event) {
     event.preventDefault();
     axios
-      .put(`http://localhost:3010/tasks/${this.props.tasks.id}`, {
+      .put(`/tasks/${this.props.tasks.id}`, {
         task: this.state.task,
         due: this.state.due,
         tag: this.state.tag,
