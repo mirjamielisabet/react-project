@@ -34,7 +34,7 @@ class AddTodo extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("http://localhost:3010/tasks", {
+      .post("/tasks", {
         task: this.state.task,
         due: this.state.due,
         tag: this.state.tag,
