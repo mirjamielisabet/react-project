@@ -51,7 +51,7 @@ class TodoList extends React.Component {
         text: "",
       });
       axios
-        .get("http://localhost:3010/tasks?_sort=index&done=false")
+        .get("/tasks?_sort=index&done=false")
         .then((result) => {
           this.setState({
             loading: false,
@@ -77,7 +77,7 @@ class TodoList extends React.Component {
         text: "",
       });
       axios
-        .get(`http://localhost:3010/tasks?tag=${this.state.tag}`)
+        .get(`/tasks?tag=${this.state.tag}`)
         .then((result) => {
           this.setState({
             loading: false,
@@ -103,7 +103,7 @@ class TodoList extends React.Component {
   // updates the changes to the state's data array
   handleDelete(id) {
     axios
-      .delete(`http://localhost:3010/tasks/${id}`)
+      .delete(`/tasks/${id}`)
       .then((res) => {
         this.setState((previousState) => {
           return {
@@ -124,7 +124,7 @@ class TodoList extends React.Component {
   handleChange(tasks) {
     let id = tasks.id;
     axios
-      .put(`http://localhost:3010/tasks/${id}`, {
+      .put(`/tasks/${id}`, {
         task: tasks.task,
         due: tasks.due,
         tag: tasks.tag,
@@ -171,7 +171,7 @@ class TodoList extends React.Component {
         tag: "",
       });
       axios
-        .get(`http://localhost:3010/tasks?task_like=${this.state.text}`)
+        .get(`/tasks?task_like=${this.state.text}`)
         .then((result) => {
           this.setState({
             loading: false,
@@ -199,7 +199,7 @@ class TodoList extends React.Component {
         data: [],
       });
       axios
-        .get("http://localhost:3010/tasks?_sort=date&_order=desc&done=false")
+        .get("/tasks?_sort=date&_order=desc&done=false")
         .then((result) => {
           this.setState({
             loading: false,
