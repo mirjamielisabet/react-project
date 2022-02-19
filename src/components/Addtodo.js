@@ -39,7 +39,7 @@ class AddTodo extends React.Component {
         due: this.state.due,
         tag: this.state.tag,
         done: false,
-        date: new Date(Date.now()).toLocaleString().split(",")[0],
+        date: new Date().toISOString().replace(/T/, " ").replace(/\..+/, ""),
       })
       .then(() => {
         this.props.getData();
