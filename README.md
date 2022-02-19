@@ -14,7 +14,7 @@ The App was created and returned for the course in 12/2021 and it was later (2/2
 
 ## Tech/framework used
 
-- Frontend: React
+- Frontend: React, CSS
 - Backend: [json-server](https://github.com/typicode/json-server)
 
 ## Known bugs
